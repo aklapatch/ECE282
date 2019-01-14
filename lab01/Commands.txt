@@ -1,0 +1,31 @@
+The date command sets or prints the date and time. If the time was not specified on the command line, the date command just prints the date and time.
+
+The who command shows how many and which users are logged into the system
+
+Using whoami as a command prints your username.
+
+Who am i prints your username and shows the time and date you logged in as well as the server/computer you logged into.
+
+Using pwd prints the directory you are currently in.
+
+The cd command navigates into another directory.
+
+The mkdir command makes a new folder.
+
+The rm command deletes a file (or folder if -rf is specified).
+
+Using rmdir deletes an empty folder.
+
+The cp command copies a file or folder from one location to another.
+
+The mv command moves a file or folder from on location to another. It can also be used to rename a file or folder.
+
+The ls command displays all files and folder in the current directory. If -l is used as a argument, then it displays the permissions and date modified and the file size and the username of the owner of the file. If the -g flag is used, then it displays all the information that ls -l does, but without showing the username of the file or folder's owner.
+
+The cat command prints the contents of a file to the screen. The file can be specified as an argument on the command line.
+
+The more command reads from a file and displays the text of that file on the screen one page at a time. The file to read from is given as a command line argument.
+
+The less command performs the same function as the more command, but also allows the user to move backward as well as forward in the text displayed.
+
+
