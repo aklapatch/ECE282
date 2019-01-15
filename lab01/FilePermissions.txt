@@ -1,0 +1,11 @@
+The file permissions specify what users can perform certain actions with that file (or folder) 
+
+Linux/Unix file permissions are separated into three groups: owner, group, and all other users. 
+
+Linux/Unix systems also have three permission types: read, write, and execute.
+
+These are represented by the rwx,rwx,rwx symbols that appear when using the ls -l command. The first set of rwx characters represents the owner's permissions. The second one represents the groups permissions for the file. The third one represents all other user's permissions. 
+
+The r in rwx stands for read. The w stands for write, and the x stands for execute. If the r,w, or x is not present or replaced by a hypen character (-), then that permission is not granted to the owner, group, or other users. 
+
+For example, if a file has r--,-w-,--x permissions, then the owner can read the file and cannot write to it or execute it. The group can write to the file, but cannot read or execute it, and other users can execute it, but not read it or write to it.
