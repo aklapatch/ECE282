@@ -41,8 +41,8 @@ int main( int ac , char *av[] )
         puts("Error: failed to open output file.");
 
         // ac will not = 1 if file_index >0
-        while ( --file_index > 0 ){
-            if ( (fp = fopen( av[file_index] , "r" )) != NULL ){
+        while ( --ac != file_index && ac != file_index+1 ){
+            if ( (fp = fopen( av[ac] , "r" )) != NULL ){
             do_more( fp );
             fclose( fp );
 
@@ -54,8 +54,8 @@ int main( int ac , char *av[] )
         FILE * fp;
 
         // ac will not = 1 if file_index >0
-        while ( --file_index > 0 ){
-            if ( (fp = fopen( av[file_index] , "r" )) != NULL )
+        while ( --ac != file_index && ac != file_index+1 ){
+            if ( (fp = fopen( av[ac] , "r" )) != NULL )
             {
                 // write the fp's contents to the output file
                 if (dumpFile(fp,output) != 0)
