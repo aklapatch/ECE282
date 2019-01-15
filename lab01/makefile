@@ -6,3 +6,6 @@ clean:
 
 moreAK: moreAK.c
 	gcc -g moreAK.c -o moreAK.exe
+
+test: moreAK
+	./moreAK -o out.txt Commands.txt
