@@ -17,4 +17,4 @@ write_file:
 	gcc lab01-writeToFile.c -o writeFile.exe
 
 test: moreAK
-	./moreAK -o out.txt Commands.txt
+	./moreAK.exe -o out.txt Commands.txt
