@@ -55,46 +55,21 @@ int main( int ac , char *av[] )
 
 	// if it can successfully get the filename, read the file and output it to the file specified
 	if(file_index > 0 ){
-
-		
-		
+	
 		// make the output file blank
-		resetFile(av[file_index+1]);
+		resetFile(av[file_index+1]);			
 
-		FILE * output = fopen (av[file_index+1],"a");
-		
-		if( output == NULL){
-			// output file specified but not opened
-			puts("Error: failed to open output file.");
+		// no input file specified
+		if (ac == 3){
+
+			do_more(stdin, av[file_index+1]);
+
+		} else {
 
 			// ac will not = 1 if file_index >0
-			while ( --ac != file_index && ac != file_index+1 ){
-				FILE * fp;
-				if ( (fp = fopen( av[ac] , "r" )) != NULL ){
+			while ( --ac > 0 ){
 
-
-
-				do_more( fp, "NULL");
-				fclose( fp );
-
-			} else
-				return 1;
-			}
-
-			// output file specified and opened
-		} else {
-			
-
-			// no input file specified
-			if (ac == 3){
-
-				do_more(stdin, av[file_index+1]);
-
-			} else {
-
-				// ac will not = 1 if file_index >0
-				while ( --ac != file_index && ac != file_index+1 ){
-
+				if ( ac != file_index && ac != file_index+1 ){
 					FILE * fp;
 					if ( (fp = fopen( av[ac] , "r" )) != NULL )
 					{
@@ -170,6 +145,7 @@ void do_more( FILE *fp, char * output_file_name)
 	char	line[LINELEN];
 	int	num_of_lines = 0;
 	int	reply;
+
 
 	FILE * fp_tty = fopen("/dev/tty", "r");  /* NEW: cmd stream   */
 
