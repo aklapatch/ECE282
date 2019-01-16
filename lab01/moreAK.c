@@ -54,13 +54,13 @@ int main( int ac , char *av[] )
 	int file_index = oSpecified( ac, av);
 
 	// if it can successfully get the filename, read the file and output it to the file specified
-	if(file_index > 0 ){
+	if(file_index > 1 ){
 	
 		// make the output file blank
 		resetFile(av[file_index+1]);			
 
 		// no input file specified
-		if (ac == 3){
+		if (ac == 3 || ac == file_index){
 
 			do_more(stdin, av[file_index+1]);
 
@@ -86,7 +86,7 @@ int main( int ac , char *av[] )
 	// if output file was not specified
 	} else {
 
-		if ( ac == 1 )
+		if ( ac == 1 || file_index == 1 )
 			do_more( stdin, "NULL" );
 		else
 
@@ -127,9 +127,6 @@ int oSpecified(int ac, char **av){
   while (--i > 0){
 	// return index if it matches
 	if(strcmp(av[i],"-o") == 0){
-		if ( i == ac-1)
-			return 0;
-
 		return i;
 	}
 
