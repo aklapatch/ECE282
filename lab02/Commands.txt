@@ -1,0 +1,41 @@
+which: 
+	Traces the path of the ecutable (or command) that would have been executed if it had been run as a command. Using the command "which grep" could return "/usr/bin/grep" or "/bin/grep"
+
+last:
+	Scans a log file (/var/log/wtmp) and prints the users that have logged in and out that are recorded by the file. Just typing "last" is considered proper usage. It will scan the aforementioned file and print the recorded information. 
+
+ping:
+	Requests a network response from an ip address that is specified by the user. Prints the response latency, and if the packets were lost. By default this command will continue pinging the specified address until the user presses Contorl-c. Proper usage: ping ip_address (OR) ping websiteName.com
+
+df:
+	Prints the disk space for the file specified. The file can be specified by a command line argument. This can be useful if a computer has multiple volumes mounted and a user needs to see which volume the file is on, or see how much space is left on the volume where the file is. If no file is specified, then space information for all drives will be printed. Usage: "df fileName" or "df".
+
+chmod:
+	Changes the file permissions of the specified file or directory. The permissions are typically set as three digits ranging from 0 to 7 (from 000 to 777). Usage: "chmod 700 fileName" or "chmod 755 directoryName".
+
+kill:
+	Sends signals to processes. The process and/or signal can be specified by the user. If no signal is slected by the user, the TERM signal is sent. The TERM signal kills (ends) the process if the TERM signal is not caught by the process. Usage: "kill -s signalName/signalNumber processIDNumber" or "kill processID"
+
+pkill:
+	Sends a user specified signal (or SIGTERM by default) to any process matching criteria specified by the user. These -f flag specifies a pattern to match against the name of the process (or command). Usage: "pkill -f processName -s signalName".
+
+dd:
+	This command copies files to other locations and converts from one filetype to another. It can move data from stdin to stdout or from one file to another. the two arguments "of" and "if" can be used to specify files to read and write to. Usage: "dd if=inputFile of=outputFile" (read from inputFile and write to outputFile)
+
+grep:
+	Searches user specified filenames for text patterns and text matching regular expressions and outputs lines of text matching those patterns to stdout. Usage: "grep textPattern fileToSearch"
+
+ifconfig: 
+	Prints information about the network interfaces (wireless cards and ethernet devices) to the screen. That information includes the ip address of that interface, packet transmission and reception errors, and the devices' MAC address. This command is also used to configure the network interfaces. Usage: "ifconfig" OR "ifconfig interfaceName options"
+
+man -k:
+	Searches all of the manpages for text matching the user specified text after the -k argument. Prints the name of the command (or function) for that manpage and the description of that manpage. Usage: "man -k stringToSearchFor"
+
+ps -ef:
+	This command prints every process on the system and requires no arguments. Usage: "ps -ef"
+
+sed:
+	Reads input from stdin or a specified file and edits it to perform substitutions, matching, or deletions. The matching can be done with regular expressions or text patterns. Commands control the operation executed on a pattern or stream. The -r flag enables the usage of regular expressions. Usage: "sed CommandSymbol -r RegExPattern inputFile" OR "sed CommandSymbol textPattern inputFile"
+
+diff: 
+	Prints the differences between two specified files to stdout. Usage: "diff fileName1 fileName2"
