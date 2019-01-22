@@ -1,0 +1,32 @@
+who:
+    This command displays who is logged into the system and when they were logged in.
+    
+whoami:
+    Displays your username, or the username of the current user session on the screen.
+
+cp:
+    Copies a file from one directory to another. The source and destination are specified as arguments. This command will overwrite the destination file.
+
+open():
+    Takes in a path to a file, and returns the file descriptor and an unsigned integer that can be used for other operations
+
+read():
+    Reads a specified number of bytes from an already opened file into a specified buffer.
+
+fgets():
+    Reads a line from a file stream and stores it in a buffer. The max number of characters to read is specified.
+
+fputs():
+    Reads from the specified string until it gets to a '\0' character, and outputs that text to a specified file stream.
+
+lseek():
+    Moves the offset of the file with the specified file descriptor and a "where from" macro.
+
+perror():
+    Prints an error message relating to a message that previously occured. The only argument is a prefix message to the actual error message.
+
+getchar():
+    Reads a character from stdin and passes that character value back as a return value.
+
+getch():
+    Prompts the user to enter a character. The character entered is not printed to the screen. That character is also passed back as a return value. 
