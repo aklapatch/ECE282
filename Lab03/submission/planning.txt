@@ -1,0 +1,24 @@
+Overall List: 
+Error/Usage message if there are no args
+create dest file if does not exist
+error if source does not exist and exit
+Append to dest file
+
+append.c flow:
+check for argc
+    if argc <=2 ( source but no dest specified)
+        print usage message and exit
+    ( will not need to have a --help since no dest will be specified)
+
+
+try to open source file
+if source file does not exist
+    print error + exit
+
+otherwise
+    append source to dest file
+    account for errors along the way.
+
+append.c functions:
+    readFile: reads file and returns string with text in it. returns "NULL" if the filed does not open
+    appendfile: takes in a string and appends that to the specified filename. prints error messages too.
