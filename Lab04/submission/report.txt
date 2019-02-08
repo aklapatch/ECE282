@@ -6,4 +6,4 @@ c) in binary it is 100000000000000. In octal is is 40000.
 
 d) that mask is 100000000 in binary and 400 in octal ( for S_IRUSR() ).
 
-e) Owner can read: 400, write: 200. Group can read only 40. Others cannot read or write or execute 7
+e) Owner can read: 400 octal 100000000b, write: 200 octal 10000000b  . Group can read only 40 octal or 100000b. Others cannot read or write or execute 7 octal or 111b
