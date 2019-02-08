@@ -8,9 +8,10 @@ char *gid_to_name( gid_t gid )
  *   */
 {
 	struct group *getgrgid(), *grp_ptr;
-	static  char numstr[10];
 
 	if ( ( grp_ptr = getgrgid(gid) ) == NULL ){
+
+		static  char numstr[10];
 		sprintf(numstr,"%d", gid);
 		return numstr;
 	}

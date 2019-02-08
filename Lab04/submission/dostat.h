@@ -4,15 +4,12 @@
 #include<stdlib.h>
 #include<string.h>
 #include<dirent.h>
+#include<pwd.h>
+#include<grp.h>
+#include<stdio.h>
 #include<sys/types.h>
-#include	<pwd.h>
-#include	<grp.h>
-#include	<stdio.h>
-#include	<sys/types.h>
-#include	<dirent.h>
-#include	<sys/stat.h>
-#include <string.h>
-#include <stdlib.h>
+#include<sys/stat.h>
+#include"show_file_info.h"
 
 void dostat(char *,char *);
 
