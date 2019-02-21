@@ -1,0 +1,30 @@
+Aaron Klapatch
+2/14/2019
+
+a) If cat is used without any arguments, it reads from stdin, and outputs whatever it reads from stdin.
+
+b) If cat is used like this 'cat fileName', it reads that  and prints that file's contents to stdout all at once.
+
+c) If cat is used like this 'cat < fileName', it reads that  and prints that file's contents to stdout all at once.
+
+d) If cat is used as such 'cat > fileName', it reads from whatever the user puts in stdin, and outputs it into the specified file 
+
+e) Using cat like this: 'cat >> fileName' reads from stdin and appends whatever was in stdin to the specified file.
+
+Section 2
+
+a) Print a list of users to a file called 'userlist'
+who > userlist
+
+b) Print out the line that has your username into the 'userlist' file (my username is aklapatc)
+grep 'aklapatc' userlist
+
+c) Print the line that has your name in the 'userlist' file to a file name 'my_user' 
+grep aklapatc  userlist > my_user
+
+d) Append the line with a specific username from 'userlist' to the file 'my_user' 
+grep jamstauf  userlist >> my_user
+
+
+
+
