@@ -42,8 +42,11 @@ void recursive_ls( char dirname[], int dir_level )
 
 			// only run if the directory passed back was not null
 			if (strcmp(new_dir, "") != 0){
-				printf ("Entering Directory: %s \n",new_dir);
+				printf("%s: \n",new_dir); // let the user now what directory you are in
 				recursive_ls(new_dir,dir_level+1);
+        
+        // inform user what directory you are in
+        printf("%s: \n",dirname);
 				
 				free(new_dir); // free memory allocated for file name
 			}

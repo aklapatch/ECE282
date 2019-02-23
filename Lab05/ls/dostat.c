@@ -10,6 +10,7 @@ char * dostat( char *filename , char * dirname)
 	int size = strlen(filename) + strlen(dirname);
 	char * file_and_dir_name = malloc(sizeof(char)*(size+2));
 	
+   // concatenate the filename and directory name. 
 	if (file_and_dir_name != NULL) {
 
 		strcpy(file_and_dir_name, dirname);
@@ -35,7 +36,7 @@ char * dostat( char *filename , char * dirname)
 		// free allocated memory
 		free(file_and_dir_name);
 	}
-	else 
+	else  // if memory allocation fails
 		fprintf(stderr, "Memory Allocation failed for file and Directory name concatenation.\n");
 	
 	return "";

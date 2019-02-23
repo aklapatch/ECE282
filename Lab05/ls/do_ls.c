@@ -14,8 +14,9 @@ void do_ls( char dirname[] )
 		fprintf(stderr,"ls1: cannot open %s\n", dirname);
 	else
 	{
+     // open all the directories and read them
 		while ( ( direntp = readdir( dir_ptr ) ) != NULL )
-			dostat( direntp->d_name , dirname);
+			dostat( direntp->d_name , dirname);  // get info for each file
 		closedir(dir_ptr);
 	}
 }

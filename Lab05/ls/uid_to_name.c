@@ -16,5 +16,5 @@ char *uid_to_name( uid_t uid )
 		return numstr;
 	}
 	else
-		return pw_ptr->pw_name ;
+		return pw_ptr->pw_name ; // return name for the file
 }

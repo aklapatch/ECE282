@@ -8,7 +8,8 @@ char *gid_to_name( gid_t gid )
  *   */
 {
 	struct group *getgrgid(), *grp_ptr;
-
+  
+  // if the gr id is not found 
 	if ( ( grp_ptr = getgrgid(gid) ) == NULL ){
 
 		static  char numstr[10];
@@ -16,5 +17,5 @@ char *gid_to_name( gid_t gid )
 		return numstr;
 	}
 	else
-		return grp_ptr->gr_name;
+		return grp_ptr->gr_name; // return name
 }

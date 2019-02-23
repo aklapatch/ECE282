@@ -11,8 +11,10 @@ void show_file_info( char *filename, struct stat *info_p )
 	void	mode_to_letters();
         char    modestr[11];
 
+  // get the file mode in a string
 	mode_to_letters( info_p->st_mode, modestr );
 
+  // output the file information
 	printf( "%s"    , modestr );
 	printf( "%4d "  , (int) info_p->st_nlink);	
 	printf( "%-8s " , uid_to_name(info_p->st_uid) );

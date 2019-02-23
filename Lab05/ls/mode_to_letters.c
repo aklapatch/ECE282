@@ -2,6 +2,7 @@
 
 #include "mode_to_letters.h"
 
+// convert the mode to linux file permissions letters
 void mode_to_letters( int mode, char str[] )
 {
     strcpy( str, "----------" );           /* default=no perms */
