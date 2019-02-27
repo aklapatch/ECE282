@@ -1,0 +1,30 @@
+
+a) The mount command takes a physical drive and makes it accessible from a certain place in the existing filesystem. That place is specified in the arguments of the program. Unmount removes that accessibility by disconnecting the drive from that location where it was mounted
+
+b) tty prints the name of the terminal object that is reading from stdin.
+
+c) The stty command is used to change the settings that the terminal uses to delimit and separate lines of input on the terminal.
+
+d) seq prints a series of numbers. That series can be further specified by command line arguments. 
+
+e) head prints out the first 10 lines of a specified file.
+
+f) tail prints out the last 10 lines of the specified file
+
+g) echo prints out its first argument to stdout. Arguments can be used to further specify output and format.
+
+h) sed can be used to manipulate files and input/output streams. It can be used to perform substitutions, add text according to patterns, and more. Regular expressions can be used to specify patterns as well. 
+
+Commands for tasks (Part 2).
+
+a) seq 100 > s1.txt
+
+b) seq 2 2 100 > s2.txt 
+
+c) head -n 5 s1.txt
+
+d) tail -n 5 s2.txt > temp.txt
+
+e) head s1.txt -n 9 | tail -n 5
+
+f) grep '.png' acmart.html
