@@ -1,0 +1,40 @@
+Command descriptions
+
+* The kill command sends signals to a process. That process can be specified
+  By a pid or name. By default, kill sends the TERM signal, which terminates
+  programs by default.
+
+* kill -9 will signal all processes in group 9 with TERM unless another signal
+  is specified
+
+* pkill will search for and send signals to processes matching the criteria
+  that is specified by the arguments
+
+* top will bring up a menu of running processes and list their user, pid, cpu 
+  usage, memory usage and the command that is running the process (and more).
+
+* top -u `user` -d 0.5 will bring up processes only associated with 'user'.
+  The -d 0.5 argument will make top refresh every 0.5 seconds.
+
+* who | tr 'a' 'A' will translate the 'a' and 'A' characters from the output of 
+  the who command to another character set. 
+
+Command usage:
+a) count all processes that are currently running on your system
+The grep command filters out the first line.
+ps -A | grep -v 'TTY' | wc -l 
+
+b) send SIGINT to a process. SIGINT has the value of 2.
+kill -s 2 pid
+
+c) listing only hidden files in current directory.
+Dang, you had me learn RegEx
+ls -a | grep -e "^[.][a-zA-Z0-9_]"
+
+2. If you press Ctrl-C when the program is waiting for a response to the 'do
+   you want' to quit question, the characters '^C' appear in response to every 
+   time you press Ctrl-C .
+
+4. a) the various play again versions use different terminal settings and have 
+      different methods of filtering text to just get 'y' or 'n'.
+
